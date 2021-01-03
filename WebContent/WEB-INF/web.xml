@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                                 http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>ListeArticlesServlets</servlet-name>
+        <servlet-class>ma.ensias.bookshop.servlet.ListeArticlesServlets</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddArticleToShoppingCart</servlet-name>
+        <servlet-class>ma.ensias.bookshop.servlet.AddArticleToShoppingCart</servlet-class>
+    </servlet>
+	<servlet>
+        <servlet-name>ValiderAchatServlet</servlet-name>
+        <servlet-class>ma.ensias.bookshop.servlet.ValiderAchatServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListeArticlesServlets</servlet-name>
+        <url-pattern>/ListeArticlesServlets</url-pattern>
+   		<url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddArticleToShoppingCart</servlet-name>
+        <url-pattern>/AddArticleToShoppingCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValiderAchatServlet</servlet-name>
+        <url-pattern>/ValiderAchatServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!--
+    <security-constraint>
+		<display-name>Constrainte 1</display-name>
+		<web-resource-collection>
+			<web-resource-name>all resources</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>HEAD</http-method>
+			<http-method>PUT</http-method>
+			<http-method>OPTIONS</http-method>
+			<http-method>TRACE</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+			<role-name>ensias</role-name>
+		</auth-constraint>
+		
+		<user-data-constraint>
+      		<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    	</user-data-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+	<security-role>
+		<description/>
+		<role-name>admin</role-name>
+	</security-role>
+	<security-role>
+		<description/>
+		<role-name>ensias</role-name>
+	  </security-role>
+	-->
+</web-app>
